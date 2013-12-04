@@ -1,0 +1,223 @@
+/*==============================
+	Global
+==============================*/
+@font-face {
+    font-family: 'diner-regularregular';
+    src: url('../fonts/Diner-Regular-webfont.eot');
+    src: url('../fonts/Diner-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Diner-Regular-webfont.woff') format('woff'),
+         url('../fonts/Diner-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Diner-Regular-webfont.svg#diner-regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cantarellregular';
+    src: url('../fonts/Cantarell-Regular-webfont.eot');
+    src: url('../fonts/Cantarell-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cantarell-Regular-webfont.woff') format('woff'),
+         url('../fonts/Cantarell-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Cantarell-Regular-webfont.svg#cantarellregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+p {
+    font-family: 'cantarellregular', arial, sans-serif;
+	line-height: 24px;
+}
+
+/* Headings */
+.about h2,
+.students h2,
+.contact h2 {
+    font-family: 'diner-regularregular', arial, sans-serif;
+    font-size: 2.5em;
+    letter-spacing: 6px;
+}
+
+body {
+	background: #CCC;
+}
+
+/*==============================
+	Structure & Layout 
+==============================*/
+.container {
+	margin: 0 auto;
+	width: 960px;
+	
+}
+
+
+/*==============================
+	Navigation
+==============================*/
+header {
+	position: relative;
+
+}
+
+header li {
+	float: left;
+	list-style: none;
+	margin: 0 10px;
+}
+
+header img {
+	position: absolute;
+	top: -361px;
+	left: 361.5px;
+}
+
+/* Remove inherited margin on <ul> */
+header ul {
+	margin: 0;
+}
+
+/* Push links far right w/o floats */
+
+nav {
+	background: #666;	
+    height: 64px;
+	position: absolute;
+	left: 0;
+	top: -21px;
+	width: 960px;
+}
+
+nav a:link,
+nav a:visited {
+	color: #fff;
+    font-family: 'cantarellregular', arial, sans-serif;
+	height: 64px;
+	display: block;
+	line-height: 48px;
+    padding-left: 110px;
+	text-align: center;	
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 128px;
+	
+	/*CSS 3*/
+	transition: all .25s;
+}
+
+nav a:hover, 
+nav a:active {
+    color: #00ccff;
+	margin-top: 10px;
+}
+
+
+
+/*==============================
+	Navigation: Sprite Map
+==============================*/
+/* About Link Off State*/
+nav li:nth-child(1) a:link {
+    background: url("../img/spritemap.png") no-repeat 0 0;
+}
+
+nav li:nth-child(1) a:hover {
+    background: url("../img/spritemap.png") no-repeat 0 -64px;
+}
+
+/* Students Link */
+nav li:nth-child(2) a:link {
+    background: url("../img/spritemap.png") no-repeat 0 -128px;
+}
+
+nav li:nth-child(2) a:hover {
+    background: url("../img/spritemap.png") no-repeat 0 -192px;
+}
+
+/* Contact Link */
+nav li:nth-child(3) a:link {
+    background: url("../img/spritemap.png") no-repeat 0 -256px;
+}
+
+nav li:nth-child(3) a:hover {
+    background: url("../img/spritemap.png") no-repeat 0 -320px;
+}
+
+
+/*==============================
+	Navigation: Page Indicators
+==============================*/
+.about li:nth-child(1), 
+.students li:nth-child(2),
+.contact li:nth-child(3){
+	background: rgba(255,255,255,.15);
+}
+
+/*==============================
+	Bottom Text box
+==============================*/
+.bottombox1,
+.bottombox2,
+.bottombox3,
+.bottombox4 {
+	box-shadow:inset 0px 0px 10px 1px #666666;
+	height: 521px;
+	margin: 0 0 25px 0;
+	width:960px;
+	}
+	
+.bottombox1 {
+	background: rgba(255,107,0,.65);
+}
+
+.bottombox2 {
+	background: rgba(108,192,74,.65);
+}
+
+.bottombox3 {
+	background: rgba(106,134,184,.65);
+}
+
+.bottombox4 {
+	background: rgba(255,198,86,.65);
+}
+
+/*==============================
+	Gallery Theme - Customize
+==============================*/
+
+.gallery .control-button {
+  color: #00ccff;
+  color: rgba(0, 204, 255, 0.4);
+}
+
+.gallery .control-button:hover {
+   color: #00ccff;
+  color: rgba(0, 204, 255, 1);
+}
+
+/*
+	Theme controls how everything looks in Gallery CSS.
+*/
+.gallery {
+  position: relative;
+}
+.gallery .item {
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+}
+.gallery .controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.gallery .control-button {
+  display: inline-block;
+  margin: 0 .02em;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  transition: color .1s;
+}
